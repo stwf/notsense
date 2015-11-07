@@ -3,7 +3,7 @@ defmodule Notsense.Mixfile do
 
   def project do
     [app: false,
-     version: "0.1",
+     version: "0.1.1",
      elixir: "~> 1.0",
      deps: deps,
      name: "Notsense",
