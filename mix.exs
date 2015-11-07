@@ -3,7 +3,7 @@ defmodule Notsense.Mixfile do
 
   def project do
     [app: :notsense,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
      deps: deps,
