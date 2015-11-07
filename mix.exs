@@ -5,6 +5,7 @@ defmodule Notsense.Mixfile do
     [app: :notsense,
      version: "0.1.1",
      elixir: "~> 1.0",
+     elixirc_paths: elixirc_paths(Mix.env),
      deps: deps,
      name: "Notsense",
      source_url: "https://github.com/tehsnappy/notsense",
@@ -21,6 +22,9 @@ defmodule Notsense.Mixfile do
   defp deps do
     []
   end
+  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+
+  defp elixirc_paths(_),     do: ["lib", "web"]
 
   defp description do
     "Pure elixir database driver for MariaDB / MySQL."
