@@ -2,7 +2,7 @@ defmodule Notsense.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :notsense,
+    [app: false,
      version: "0.1",
      elixir: "~> 1.0",
      deps: deps,
