@@ -1,13 +1,13 @@
-defmodule Mariaex.Mixfile do
+defmodule Notsense.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :mariaex,
-     version: "0.4.3",
+    [app: :notsense,
+     version: "0.1",
      elixir: "~> 1.0",
      deps: deps,
-     name: "Mariaex",
-     source_url: "https://github.com/liveforeverx/mariaex",
+     name: "Notsense",
+     source_url: "https://github.com/tehsnappy/notsense",
      test_coverage: [tool: Coverex.Task, coveralls: true],
      description: description,
      package: package]
@@ -19,8 +19,7 @@ defmodule Mariaex.Mixfile do
   end
 
   defp deps do
-    [{:decimal, "~> 1.0"},
-     {:coverex, "~> 1.4.1", only: :test}]
+    []
   end
 
   defp description do
@@ -28,7 +27,7 @@ defmodule Mariaex.Mixfile do
   end
 
   defp package do
-    [contributors: ["Dmitry Russ(Aleksandrov)"],
-     links: %{"Github" => "https://github.com/xerions/mariaex"}]
+    [contributors: ["Steven Fuchs"],
+     links: %{"Github" => "https://github.com/tehsnappy/notsense"}]
   end
 end
