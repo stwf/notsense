@@ -22,12 +22,12 @@ defmodule Notsense.Mixfile do
   defp deps do
     []
   end
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
+  defp elixirc_paths(:test), do: ["web"]
 
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(_),     do: ["web"]
 
   defp description do
-    "Pure elixir database driver for MariaDB / MySQL."
+    "dummy placeholders for adsense."
   end
 
   defp package do
