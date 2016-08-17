@@ -1,7 +1,7 @@
 defmodule Notsense.NotsenseView do
   use Notsense.Web, :view
 
-  def render("ad_tower.html", %{}) do
+  def tower do
     if (Application.get_env(:notsense, :live_ads)) do
       render("adsense_tower.html", %{})
     else
@@ -9,11 +9,19 @@ defmodule Notsense.NotsenseView do
     end
   end
 
-  def render("ad_block.html", %{}) do
+  def block do
     if (Application.get_env(:notsense, :live_ads)) do
       render("adsense_block.html", %{})
     else
       tag(:img, src: "/images/block_ad.jpg")
+    end
+  end
+
+  def script do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_script.html", %{})
+    else
+      ""
     end
   end
 
