@@ -17,13 +17,4 @@ defmodule Notsense.NotsenseView do
     end
   end
 
-  def script do
-    if (Application.get_env(:notsense, :live_ads)) do
-      render("adsense_script.html", %{})
-    else
-      ""
-    end
-  end
-
-
 end
