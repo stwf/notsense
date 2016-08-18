@@ -17,4 +17,12 @@ defmodule Notsense.NotsenseView do
     end
   end
 
+  def key do
+    Application.get_env(:notsense, :adsense_key)
+  end
+
+  def slot(ty) do
+    Application.get_env(:notsense, :adsense_slot)[ty]
+  end
+
 end
