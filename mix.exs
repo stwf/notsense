@@ -20,9 +20,13 @@ defmodule Notsense.Mixfile do
   end
 
   defp deps do
-    []
+    [
+      {:phoenix, "~> 1.2.0-rc", only: :dev},
+      {:phoenix_html, "~> 2.5", only: :dev}
+    ]
   end
-  defp elixirc_paths(:test), do: ["web"]
+
+defp elixirc_paths(:test), do: ["web"]
 
   defp elixirc_paths(_),     do: ["web"]
 
