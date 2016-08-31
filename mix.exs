@@ -25,6 +25,7 @@ defmodule Notsense.Mixfile do
   defp deps do
     [
       {:phoenix, "~> 1.2.0", only: :dev},
+      {:calliope, "~> 0.3.0" },
       {:phoenix_html, "~> 2.5", only: :dev}
     ]
   end
