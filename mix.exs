@@ -3,8 +3,11 @@ defmodule Notsense.Mixfile do
 
   def project do
     [app: :notsense,
-     version: "0.2.2",
+     version: "0.9.0",
      elixir: "~> 1.3",
+     build_embedded: Mix.env == :prod,
+     start_permanent: Mix.env == :prod,
+
      elixirc_paths: elixirc_paths(Mix.env),
      deps: deps(),
      name: "Notsense",
@@ -21,7 +24,7 @@ defmodule Notsense.Mixfile do
 
   defp deps do
     [
-      {:phoenix, "~> 1.2.0-rc", only: :dev},
+      {:phoenix, "~> 1.2.0", only: :dev},
       {:phoenix_html, "~> 2.5", only: :dev}
     ]
   end
