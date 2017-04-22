@@ -17,6 +17,14 @@ defmodule Notsense.NotsenseView do
     end
   end
 
+  def banner do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_banner.html", %{})
+    else
+      tag(:img, src: "/images/banner_ad.jpg")
+    end
+  end
+
   def key do
     Application.get_env(:notsense, :adsense_key)
   end
