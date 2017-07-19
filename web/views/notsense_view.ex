@@ -1,6 +1,12 @@
 defmodule Notsense.NotsenseView do
   use Notsense.Web, :view
 
+  def script do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_script.html", %{})
+    end
+  end
+
   def tower do
     if (Application.get_env(:notsense, :live_ads)) do
       render("adsense_tower.html", %{})
