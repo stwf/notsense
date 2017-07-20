@@ -7,6 +7,12 @@ defmodule Notsense.NotsenseView do
     end
   end
 
+  def intitiate_load do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_initiate.html", %{})
+    end
+  end
+
   def tower do
     if (Application.get_env(:notsense, :live_ads)) do
       render("adsense_tower.html", %{})
