@@ -23,11 +23,7 @@ defmodule Notsense.Mixfile do
   end
 
   defp deps do
-    [
-      {:phoenix, "~> 1.2.0"},
-      {:phoenix_haml, "~> 0.2.1"},
-      {:phoenix_html, "~> 2.5"}
-    ]
+    []
   end
 
 defp elixirc_paths(:test), do: ["web"]
