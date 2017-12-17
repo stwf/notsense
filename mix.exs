@@ -4,7 +4,7 @@ defmodule Notsense.Mixfile do
   def project do
     [app: :notsense,
      version: "0.9.0",
-     elixir: "~> 1.3",
+     elixir: "~> 1.5",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
 
@@ -23,7 +23,9 @@ defmodule Notsense.Mixfile do
   end
 
   defp deps do
-    []
+    [
+      {:phoenix, "~> 1.3.0"},
+    ]
   end
 
 defp elixirc_paths(:test), do: ["web"]
