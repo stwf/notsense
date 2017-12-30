@@ -13,6 +13,24 @@ defmodule Notsense.NotsenseView do
     end
   end
 
+  def responsive do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_responsive.html", %{})
+    else
+      tag(:img, src: "/images/tower_ad.jpg")
+    end
+  end
+
+  def tower do
+    if (Application.get_env(:notsense, :live_ads)) do
+      render("adsense_tower.html", %{})
+    else
+      tag(:img, src: "/images/tower_ad.jpg")
+    end
+  end
+
+
+
   def tower do
     if (Application.get_env(:notsense, :live_ads)) do
       render("adsense_tower.html", %{})
