@@ -3,7 +3,7 @@ defmodule Notsense.Mixfile do
 
   def project do
     [app: :notsense,
-     version: "0.9.1",
+     version: "1.0.0",
      elixir: ">= 1.5",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
